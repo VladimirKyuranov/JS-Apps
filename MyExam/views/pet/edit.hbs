@@ -1,0 +1,10 @@
+<section class="detailsMyPet">
+    <h3>{{this.name}}</h3>
+    <p>Pet counter: <i class="fas fa-heart"></i> {{this.petsCount}}</p>
+    <p class="img"><img src={{this.imageUrl}}>
+    </p>
+    <form action="#/editPet/{{this._id}}" method="post">
+        <textarea type="text" name="description">{{this.description}}</textarea>
+        <button class="button" type="submit"> Save</button>
+    </form>
+</section>

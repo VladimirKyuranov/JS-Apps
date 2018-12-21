@@ -1,0 +1,50 @@
+<form id="formCreate" action="#/furniture/create" method="post">
+    <div class="row space-top">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" for="make">Make</label>
+                <input class="form-control" id="make" name="make" type="text">
+            </div>
+            <div class="form-group has-success">
+                <label class="form-control-label" for="model">Model</label>
+                <input class="form-control" id="model" name="model" type="text">
+            </div>
+            <div class="form-group has-danger">
+                <label class="form-control-label" for="year">Year</label>
+                <input class="form-control" id="year" name="year" type="number">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" for="description">Description</label>
+                <input class="form-control" id="description" name="description" type="text">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="form-control-label" for="price">Price</label>
+                <input class="form-control" id="price" name="price" type="number">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" for="image">Image</label>
+                <input class="form-control" id="image" name="image" type="text">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" for="material">Material (optional)</label>
+                <input class="form-control" id="material" name="material" type="text">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Create" />
+        </div>
+    </div>
+</form>
+
+<script type="application/javascript">
+    $(function () {
+        $("#formCreate").on("submit", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let makeInput = $("#make");
+            if (makeInput.val().length < 4){
+                makeInput.addClass("is-invalid");
+            }
+        });
+    });
+</script>

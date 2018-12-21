@@ -1,0 +1,20 @@
+<nav>
+    <div class="left-container">
+        <ul>
+            <li><a href="#/">Home</a></li>
+            {{#if user}}
+            <li><a href="#/flights">Flights</a></li>
+            {{/if}}
+            {{#unless user}}
+            <li><a href="#/login">Login</a></li>
+            <li><a href="#/register">Register</a></li>
+            {{/unless}}
+        </ul>
+    </div>
+    <div class="right-container">
+        {{#if user}}
+        <span>Welcome, {{username}}</span>
+        <a href="#/logout" class="log-out">Logout</a>
+        {{/if}}
+    </div>
+</nav>

@@ -1,0 +1,20 @@
+{{> header}}
+
+<section id="viewCatalog" class="background-img">
+    {{#if user}}
+    <a href="#/flight/create" class="add-flight">Add Flight +</a>
+    {{/if}}
+
+    <div class="added-flights">
+        {{#each flights}}
+        <a href="#/flight/details/{{_id}}" class="added-flight" data-id="{{_id}}">
+            <img src={{image}} alt=""
+                 class="picture-added-flight">
+            <h3>{{destination}}</h3>
+            <span>from {{origin}}</span><span>{{departureDate}}</span>
+        </a>
+        {{/each}}
+    </div>
+</section>
+
+{{> footer}}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Messages</title>
+    <link rel="stylesheet" type="text/css" href="messages.css"/>
+</head>
+
+<body>
+<div id="notifications">
+    <div id="loadingBox" class="notification">
+        <span>Loading …</span>
+    </div>
+    <div id="infoBox" class="notification">
+        <span>Info</span>
+    </div>
+    <div id="errorBox" class="notification">
+        <span>Error</span>
+    </div>
+</div>
+
+<div id="app">
+
+</div>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+<script src="node_modules/sammy/lib/min/sammy-latest.min.js"></script>
+<script src="node_modules/sammy/lib/min/plugins/sammy.handlebars-latest.min.js"></script>
+<!-- Helpers -->
+<script src="helpers/commonPartials.js"></script>
+<script src="helpers/storage.js"></script>
+<script src="helpers/requester.js"></script>
+<script src="helpers/notifications.js"></script>
+<script src="helpers/loading.js"></script>
+<script src="helpers/formater.js"></script>
+<!-- Models -->
+<script src="models/userModel.js"></script>
+<script src="models/messageModel.js"></script>
+<!-- Controllers -->
+<script src="controllers/home.js"></script>
+<script src="controllers/user.js"></script>
+<!-- Router -->
+<script src="app.js"></script>
+</body>
+
+</html>
